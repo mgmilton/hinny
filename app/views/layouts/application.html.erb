@@ -4,8 +4,8 @@
     <title>Hinny</title>
     <%= csrf_meta_tags %>
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" media="all" href="/assets/application.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
   </head>
 
@@ -13,12 +13,11 @@
     <%= render "shared/nav" %>
 
     <div class="container">
-      <%= image_tag "logo.png", id: "logo", alt: "Hinny logo - understanding the Asset Pipeline" %>
+      <img src="/assets/logo.png" alt="Hinny logo - understanding the Asset Pipeline", id="logo" />
       <%= yield %>
     </div>
 
     <%= render "shared/footer" %>
-
 
     <%= javascript_include_tag 'application' %>
   </body>
